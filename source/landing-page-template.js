@@ -1,6 +1,6 @@
-// html for the whole team 🤵
+// html for the whole team
 const generateWholeTeam = (team) => {
-  // manager's html
+  // manager's html 🤵
   const generateManager = (manager) => {
     return `
     <div class="card employee-card">
