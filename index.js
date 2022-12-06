@@ -54,7 +54,7 @@ const questions = async () => {
     )
     newStaffMemberData.push(newManager)
 
-    // if engineer's position elected then ask these questions 👇
+    // if engineer's position selected then ask these questions 👇
   } else if (answers.role === 'Engineer') {
     const githubResp = await inquirer.prompt([
       {
@@ -73,7 +73,7 @@ const questions = async () => {
     newStaffMemberData.push(newEngineer)
 
     // if intern's position selected then ask these questions 👇
-  } else if (answers.role === 'Interner') {
+  } else if (answers.role === 'Intern') {
     const internResp = await inquirer.prompt([
       {
         type: 'input',
@@ -111,8 +111,9 @@ async function promptQuestion() {
 
 promptQuestion()
 
+//! This part is not functioning. I really don't understand by "generateTeam" is not a function?
 function createTeam() {
-  console.log('New Guy', newStaffMemberData)
+  console.log(generateTeam)
   fs.writeFileSync(
     './output/index.html',
     generateTeam(newStaffMemberData),

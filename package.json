@@ -1,8 +1,14 @@
 {
+  "scripts": {
+    "test": "jest"
+  },
   "dependencies": {
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
     "jest": "^29.3.1"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }

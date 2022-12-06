@@ -17,5 +17,5 @@ test('getRole() should return "manager"', () => {
 test('Can get office number via getOffice()', () => {
   const testValue = 100
   const e = new manager('Iqbal', 1, 'test@test.com', testValue)
-  expect(e.getOfficNumber()).toBe(testValue)
+  expect(e.getOfficeNumber()).toBe(testValue)
 })

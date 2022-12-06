@@ -1,7 +1,8 @@
 // html for the whole team
-const generateWholeTeam = (team) => {
+const generateTeam = (team) => {
   // manager's html 🤵
   const generateManager = (manager) => {
+    console.log('making manager', manager)
     return `
     <div class="card employee-card">
         <div class="card-header">
@@ -58,29 +59,35 @@ const generateWholeTeam = (team) => {
   }
 
   const html = []
-
   html.push(
     team
-      .filter((employee) => employee.getRole() === 'Manager')
-      .map((manager) => generateManager(manager))
+      .filter((employee) => {
+        employee.getRole() === 'manager'
+        console.log(employee.getRole())
+      })
+
+      .map((manager) => {
+        generateManager(manager)
+        console.log(manager)
+      })
   )
   html.push(
     team
-      .filter((employee) => employee.getRole() === 'Engineer')
+      .filter((employee) => employee.getRole() === 'engineer')
       .map((engineer) => generateEngineer(engineer))
       .join('')
   )
   html.push(
     team
-      .filter((employee) => employee.getRole() === 'Intern')
+      .filter((employee) => employee.getRole() === 'intern')
       .map((intern) => generateIntern(intern))
       .join('')
   )
-
+  console.log('This is HTML', html)
   return html.join('')
 }
 // generate html page
-module.export = (team) => {
+const team = (team) => {
   return `
     <!DOCTYPE html>
 <html lang="en">
@@ -105,7 +112,7 @@ module.export = (team) => {
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-                ${generateWholeTeam(team)}
+                ${generateTeam(team)}
             </div>
         </div>
     </div>
@@ -113,3 +120,5 @@ module.export = (team) => {
 </html>
 `
 }
+
+module.exports = team
