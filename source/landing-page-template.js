@@ -2,7 +2,7 @@
 const generateTeam = (team) => {
   // manager's html 🤵
   const generateManager = (manager) => {
-    console.log('making manager', manager)
+    // console.log(manager)
     return `
     <div class="card employee-card">
         <div class="card-header">
@@ -61,15 +61,18 @@ const generateTeam = (team) => {
   const html = []
   html.push(
     team
-      .filter((employee) => {
-        employee.getRole() === 'manager'
-        console.log(employee.getRole())
-      })
+      //   .filter((employee) => {
+      // employee.getRole() === 'manager'
+      // console.log(employee.getRole())
 
-      .map((manager) => {
-        generateManager(manager)
-        console.log(manager)
-      })
+      .filter((employee) => employee.getRole() === 'manager')
+      .map((manager) => generateManager(manager))
+      .join('')
+
+    //   .map((manager) => {
+    //     generateManager(manager)
+    //     console.log(manager)
+    //   })
   )
   html.push(
     team
@@ -83,7 +86,7 @@ const generateTeam = (team) => {
       .map((intern) => generateIntern(intern))
       .join('')
   )
-  console.log('This is HTML', html)
+  //   console.log('This is HTML', html)
   return html.join('')
 }
 // generate html page

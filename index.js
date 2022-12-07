@@ -113,7 +113,7 @@ promptQuestion()
 
 //! This part is not functioning. I really don't understand by "generateTeam" is not a function?
 function createTeam() {
-  console.log(generateTeam)
+  console.log(newStaffMemberData)
   fs.writeFileSync(
     './output/index.html',
     generateTeam(newStaffMemberData),
