@@ -28,7 +28,7 @@ View walk through video here - [Screencastify](https://watch.screencastify.com/v
 ## Mock-Up
 
 The following image shows a mock-up of the generated HTML’s appearance and functionality:
-![HTML webpage titled “My Team” features three boxes listing employee names, titles, and other key info.](./Assets/samplepage.png)
+![HTML webpage titled “My Team” features three boxes listing employee names, titles, and other key info.](./assets/samplepage.png)
 
 ## License
 
